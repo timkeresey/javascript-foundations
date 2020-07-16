@@ -77,12 +77,12 @@ describe('Medusa', function() {
     medusa.stare(victim3);
 
     assert.equal(medusa.statues.length, 3);
-    assert.equal(medusa.statues, [victim1, victim2, victim3]);
+    assert.deepEqual(medusa.statues, [victim1, victim2, victim3]);
 
     medusa.stare(victim4);
 
     assert.equal(medusa.statues.length, 3);
-    assert.deepEqual(medusa.statues, [victim2, victim3, victim4]);  
+    assert.deepEqual(medusa.statues, [victim2, victim3, victim4]);
     assert.equal(victim4.stoned, true);
     assert.equal(victim1.stoned, false);
   });
